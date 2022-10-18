@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4EA0F92-DB0C-4240-8365-2A980D827C49}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BilliardGame</RootNamespace>
+    <AssemblyName>BilliardGame</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ballIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="eyecm.PhysX">
+      <HintPath>..\Lib\eyecm.PhysX.dll</HintPath>
+    </Reference>
+    <Reference Include="Mogre">
+      <HintPath>..\Lib\Mogre.dll</HintPath>
+    </Reference>
+    <Reference Include="Mogre-Procedural">
+      <HintPath>..\Lib\Mogre-Procedural.dll</HintPath>
+    </Reference>
+    <Reference Include="Mogre_Procedural.MogreBites">
+      <HintPath>..\Lib\Mogre_Procedural.MogreBites.dll</HintPath>
+    </Reference>
+    <Reference Include="Mogre_Procedural.MogreBites.Addons">
+      <HintPath>..\Lib\Mogre_Procedural.MogreBites.Addons.dll</HintPath>
+    </Reference>
+    <Reference Include="MOIS">
+      <HintPath>..\Lib\MOIS.dll</HintPath>
+    </Reference>
+    <Reference Include="MyGUI.Sharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\MyGUI.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio">
+      <HintPath>..\Lib\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Vorbis">
+      <HintPath>..\Lib\NAudio.Vorbis.dll</HintPath>
+    </Reference>
+    <Reference Include="NVorbis">
+      <HintPath>..\Lib\NVorbis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActorSceneNode.cs" />
+    <Compile Include="AppState.cs" />
+    <Compile Include="AppStateManager.cs" />
+    <Compile Include="Ball.cs" />
+    <Compile Include="Cue.cs" />
+    <Compile Include="Desk.cs" />
+    <Compile Include="EColorType.cs" />
+    <Compile Include="EViewMode.cs" />
+    <Compile Include="Export.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemDoubleScore.cs" />
+    <Compile Include="ItemHoldTurn.cs" />
+    <Compile Include="ItemManager.cs" />
+    <Compile Include="ItemShowMsg.cs" />
+    <Compile Include="ItemStopTime.cs" />
+    <Compile Include="ItemTolerantInWhite.cs" />
+    <Compile Include="OgreFramework.cs" />
+    <Compile Include="OgreFrameworkApp.cs" />
+    <Compile Include="GameState.cs" />
+    <Compile Include="MenuState.cs" />
+    <Compile Include="PhysxExpansion.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerUI.cs" />
+    <Compile Include="MainGame.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticMeshData.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ballIcon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

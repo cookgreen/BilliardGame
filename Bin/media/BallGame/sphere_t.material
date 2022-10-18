@@ -1,0 +1,111 @@
+material NoMaterial
+{
+	technique
+	{
+		pass
+		{
+			ambient 1 1 1 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1 10
+
+		}
+
+	}
+
+}
+
+material ball_0
+{
+	technique
+	{
+		pass
+		{		
+			ambient 1 1 1 1
+			diffuse 1 1 1 1
+			specular 0.9 0.9 1 1 10
+		}
+
+	}
+
+}
+
+material ball_1
+{
+	technique
+	{
+		pass
+		{		
+			
+			ambient 1 0 0 1
+			diffuse 1 0 0 1
+			specular 1 1 1 1 10
+			
+		}
+
+	}
+
+}
+
+material ball_2
+{
+	technique
+	{
+		pass
+		{					
+			ambient 0 1 0 1
+			diffuse 0 1 0 1
+			specular 1 1 1 1 10
+		}
+
+	}
+
+}
+
+material ball_3
+{
+	technique
+	{
+		pass
+		{		
+
+			ambient 0.7 0.4 0.1 1
+			diffuse 0.7 0.4 0.1 1
+			specular 1 1 1 1 10
+			
+		}
+
+	}
+
+}
+
+material ball_4
+{
+	technique
+	{
+		pass
+		{		
+			
+			ambient 0 0 1 1
+			diffuse 0 0 1 1
+			specular 1 1 1 1 10
+			
+		}
+
+	}
+
+}
+
+material ball_5
+{
+	technique
+	{
+		pass
+		{		
+			ambient 0 0 0 1
+			diffuse 0 0 0 1
+			specular 1 1 1 1 10
+		}
+
+	}
+
+}

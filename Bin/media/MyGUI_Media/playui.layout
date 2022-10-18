@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="StaticText" skin="StaticText" position="0 0 100 25" layer="Main" name="player1_name">
+        <Property key="Widget_Caption" value="player1"/>
+        <Property key="Text_TextAlign" value="HCenter VCenter"/>
+        <Property key="Widget_Visible" value="true"/>
+        <Property key="Text_TextColour" value="1 1 1"/>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="100 0 25 25" layer="Main" name="player1_red">
+        <Property key="Widget_Colour" value="1 0 0"/>
+        <Property key="Image_Texture" value="stop.png"/>
+        <Property key="Widget_Visible" value="false"/>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="125 0 25 25" layer="Main" name="player1_green">
+        <Property key="Widget_Colour" value="0 1 0"/>
+        <Property key="Image_Texture" value="go.png"/>
+        <Property key="Widget_Visible" value="false"/>
+    </Widget>
+    <Widget type="StaticText" skin="StaticText" position="150 0 50 25" layer="Main" name="player1_scores">
+        <Property key="Widget_Caption" value="0"/>
+        <Property key="Text_TextAlign" value="HCenter VCenter"/>
+        <Property key="Widget_Visible" value="true"/>
+        <Property key="Text_TextColour" value="1 1 1"/>
+    </Widget>
+    <Widget type="StaticText" skin="StaticText" position="200 0 25 25" layer="Main" name="player1_bigscore">
+        <Property key="Widget_Caption" value="0"/>
+        <Property key="Text_TextAlign" value="HCenter VCenter"/>
+        <Property key="Widget_Visible" value="true"/>
+        <Property key="Text_TextColour" value="1 1 1"/>
+    </Widget>
+    <Widget type="StaticText" skin="StaticText" position="700 0 100 25" layer="Main" name="player2_name">
+        <Property key="Text_TextAlign" value="HCenter VCenter"/>
+        <Property key="Widget_Caption" value="player2"/>
+        <Property key="Widget_Visible" value="true"/>
+        <Property key="Text_TextColour" value="1 1 1"/>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="675 0 25 25" layer="Main" name="player2_red">
+        <Property key="Widget_Colour" value="1 0 0"/>
+        <Property key="Image_Texture" value="stop.png"/>
+        <Property key="Widget_Visible" value="false"/>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="650 0 25 25" layer="Main" name="player2_green">
+        <Property key="Widget_Colour" value="0 1 0"/>
+        <Property key="Image_Texture" value="go.png"/>
+        <Property key="Widget_Alpha" value="1"/>
+        <Property key="Widget_Visible" value="false"/>
+    </Widget>
+    <Widget type="StaticText" skin="StaticText" position="600 0 50 25" layer="Main" name="player2_scores">
+        <Property key="Text_TextAlign" value="HCenter VCenter"/>
+        <Property key="Widget_Caption" value="0"/>
+        <Property key="Widget_Visible" value="true"/>
+        <Property key="Text_TextColour" value="1 1 1"/>
+    </Widget>
+    <Widget type="StaticText" skin="StaticText" position="575 0 25 25" layer="Main" name="player2_bigscore">
+        <Property key="Text_TextAlign" value="HCenter VCenter"/>
+        <Property key="Widget_Caption" value="0"/>
+        <Property key="Widget_Visible" value="true"/>
+        <Property key="Text_TextColour" value="1 1 1"/>
+    </Widget>
+    <Widget type="StaticText" skin="StaticText" position="360 0 80 25" layer="Main" name="txt_time">
+        <Property key="Text_TextAlign" value="HCenter VCenter"/>
+        <Property key="Widget_Caption" value="10:00"/>
+        <Property key="Widget_Visible" value="true"/>
+        <Property key="Text_TextColour" value="1 1 1"/>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="776 36 23 23" layer="Main" name="image_black">
+        <Property key="Image_Texture" value="black.png"/>
+        <Widget type="StaticText" skin="StaticText" position="0 0 23 23" name="txt_black">
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_TextAlign" value="HCenter VCenter"/>
+            <Property key="Text_TextColour" value="1 1 1"/>
+        </Widget>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="751 36 23 23" layer="Main" name="image_blue">
+        <Property key="Image_Texture" value="blue.png"/>
+        <Widget type="StaticText" skin="StaticText" position="0 0 23 23" name="txt_blue">
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_TextAlign" value="HCenter VCenter"/>
+            <Property key="Text_TextColour" value="1 1 1"/>
+        </Widget>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="726 36 23 23" layer="Main" name="image_brown">
+        <Property key="Image_Texture" value="brown.png"/>
+        <Widget type="StaticText" skin="StaticText" position="0 0 23 23" name="txt_brown">
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_TextAlign" value="HCenter VCenter"/>
+            <Property key="Text_TextColour" value="1 1 1"/>
+        </Widget>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="701 36 23 23" layer="Main" name="image_green">
+        <Property key="Image_Texture" value="green.png"/>
+        <Widget type="StaticText" skin="StaticText" position="0 0 23 23" name="txt_green">
+            <Property key="Text_TextAlign" value="HCenter VCenter"/>
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_TextColour" value="1 1 1"/>
+        </Widget>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="200 50 400 200" layer="Popup" name="win_image">
+        <Property key="Image_Texture" value="win.png"/>
+        <Property key="Widget_Visible" value="false"/>
+        <Widget type="StaticText" skin="StaticText" position="50 30 300 50" name="txt_win">
+            <Property key="Widget_Visible" value="false"/>
+            <Property key="Text_TextAlign" value="HCenter VCenter"/>
+            <Property key="Text_TextColour" value="1 1 1"/>
+        </Widget>
+    </Widget>
+    <Widget type="StaticText" skin="StaticText" position="360 100 80 20" layer="Main" name="begintime">
+        <Property key="Text_TextColour" value="1 1 1"/>
+        <Property key="Text_TextAlign" value="HCenter VCenter"/>
+    </Widget>
+</MyGUI>

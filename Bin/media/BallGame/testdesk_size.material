@@ -1,0 +1,14 @@
+material side
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.878431 0.705882 0.235294 1
+			diffuse 0.878431 0.705882 0.235294 1
+			specular 0 0 0 1 10
+		}
+
+	}
+
+}

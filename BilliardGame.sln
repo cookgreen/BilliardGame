@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilliardGame", "BilliardGame\BilliardGame.csproj", "{C4EA0F92-DB0C-4240-8365-2A980D827C49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4EA0F92-DB0C-4240-8365-2A980D827C49}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C4EA0F92-DB0C-4240-8365-2A980D827C49}.Debug|x86.ActiveCfg = Debug|x86
+		{C4EA0F92-DB0C-4240-8365-2A980D827C49}.Debug|x86.Build.0 = Debug|x86
+		{C4EA0F92-DB0C-4240-8365-2A980D827C49}.Release|Any CPU.ActiveCfg = Release|x86
+		{C4EA0F92-DB0C-4240-8365-2A980D827C49}.Release|x86.ActiveCfg = Release|x86
+		{C4EA0F92-DB0C-4240-8365-2A980D827C49}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5EFEB2FF-A97D-4A09-B2E8-0C272AC911CB}
+	EndGlobalSection
+EndGlobal

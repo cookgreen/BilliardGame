@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Mogre;
 using Mogre.PhysX;
 
+using org.ogre.framework;
+
 namespace BilliardGame
 {
     public class Ball

@@ -5,6 +5,7 @@ using Mogre;
 using MOIS;
 using Mogre_Procedural.MogreBites;
 using Vector3 = Mogre.Vector3;
+using org.ogre.framework;
 
 namespace BilliardGame
 {

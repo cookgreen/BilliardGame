@@ -11,6 +11,7 @@ using MOIS;
 using Vector3 = Mogre.Vector3;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using org.ogre.framework;
 
 namespace BilliardGame
 {

@@ -69,6 +69,10 @@
     <Reference Include="NVorbis">
       <HintPath>..\Lib\NVorbis.dll</HintPath>
     </Reference>
+    <Reference Include="OgreFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\OgreFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -82,9 +86,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActorSceneNode.cs" />
-    <Compile Include="AppState.cs" />
-    <Compile Include="AppStateManager.cs" />
     <Compile Include="Ball.cs" />
     <Compile Include="Cue.cs" />
     <Compile Include="Desk.cs" />
@@ -100,16 +101,13 @@
     <Compile Include="ItemShowMsg.cs" />
     <Compile Include="ItemStopTime.cs" />
     <Compile Include="ItemTolerantInWhite.cs" />
-    <Compile Include="OgreFramework.cs" />
     <Compile Include="OgreFrameworkApp.cs" />
     <Compile Include="GameState.cs" />
     <Compile Include="MenuState.cs" />
-    <Compile Include="PhysxExpansion.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerUI.cs" />
     <Compile Include="MainGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StaticMeshData.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

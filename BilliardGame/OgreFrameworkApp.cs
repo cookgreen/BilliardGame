@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using org.ogre.framework;
 
 namespace BilliardGame
 {
@@ -13,7 +14,7 @@ namespace BilliardGame
 
         public void Start()
         {
-            if (!OgreFramework.Instance.InitOgre("Billiards"))
+            if (!OgreFramework.Instance.InitOgre("Billiards", "ballIcon.ico", "BilliardGame", "resources.cfg"))
 		        return;
 
             OgreFramework.Instance.log.LogMessage("BilliardGame initialized!");

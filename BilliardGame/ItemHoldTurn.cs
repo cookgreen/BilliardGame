@@ -14,7 +14,7 @@ namespace BilliardGame
         {
             base.Action(gameState, initTime);
 
-            gameState.CurrentPlayer.SetTurnHold(true);
+            gameState.CurrentPlayer.IsHoldTurn = true;
         }
         public override void Update(float timeSinceLastFrame)
         {
@@ -31,7 +31,7 @@ namespace BilliardGame
         }
         public override void ActionEnd(GameState gameState)
         {
-            gameState.CurrentPlayer.SetTurnHold(false);
+            gameState.CurrentPlayer.IsHoldTurn = false;
         }
     }
 }

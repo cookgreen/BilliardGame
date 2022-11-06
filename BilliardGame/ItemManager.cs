@@ -75,7 +75,7 @@ namespace BilliardGame
 
             if (item != null)
             {
-                item.textBox = textBox;
+                item.TextBox = textBox;
                 itemMap.Add(color, item);
             }
         }

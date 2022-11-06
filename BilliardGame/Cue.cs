@@ -10,9 +10,13 @@ namespace BilliardGame
     public class Cue
     {
         private string meshName;
-        public float distToTarget;
-        public SceneNode fakePivot;
-        public SceneNode cueNode;
+        private float distToTarget;
+        private SceneNode fakePivot;
+        private SceneNode cueNode;
+
+        public float DistToTarget { get { return distToTarget; } }
+        public SceneNode FakePivot { get { return fakePivot; } }
+        public SceneNode CueNode { get { return cueNode; } }
 
         public Cue(string meshName)
         {

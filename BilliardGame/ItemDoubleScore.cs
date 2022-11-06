@@ -17,7 +17,7 @@ namespace BilliardGame
             List<Player> playerList = gameState.Players;
             foreach(var player in playerList)
             {
-                player.SetScalar(2);
+                player.Scalar = 2;
             }
         }
         public override void Update(float timeSinceLastFrame)
@@ -38,7 +38,7 @@ namespace BilliardGame
             List<Player> playerList = gameState.Players;
             foreach (var player in playerList)
             {
-                player.SetScalar(1);
+                player.Scalar = 1;
             }
         }
     }

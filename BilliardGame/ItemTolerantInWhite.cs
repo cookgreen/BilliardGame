@@ -8,7 +8,12 @@ namespace BilliardGame
 {
     public class ItemTolerantInWhite : Item
     {
-        public Player curPlayer;
+        private Player curPlayer;
+        public Player CurPlayer
+        {
+            get { return curPlayer; }
+            set { curPlayer = value; }
+        }
 
         public ItemTolerantInWhite() { }
 
@@ -16,17 +21,17 @@ namespace BilliardGame
         {
             base.Action(gameState, initTime);
 
-            gameState.CurrentPlayer.SetTolerantWhiteIn(2);
+            gameState.CurrentPlayer.TolerantWhiteIn = 2;
             curPlayer = gameState.CurrentPlayer;
         }
         public override void Update(float timeSinceLastFrame)
         {
-            textBox.SetCaption(curPlayer.GetTolerantWhiteIn().ToString());
+            textBox.SetCaption(curPlayer.TolerantWhiteIn.ToString());
         }
         public override void ActionEnd(GameState gameState)
         {
-            gameState.CurrentPlayer.SetTolerantWhiteIn(0);
-            textBox.SetCaption(curPlayer.GetTolerantWhiteIn().ToString());
+            gameState.CurrentPlayer.TolerantWhiteIn = 0;
+            textBox.SetCaption(curPlayer.TolerantWhiteIn.ToString());
         }
     }
 }

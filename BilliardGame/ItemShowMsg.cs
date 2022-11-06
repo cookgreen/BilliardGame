@@ -9,7 +9,12 @@ namespace BilliardGame
 {
     public class ItemShowMsg : Item
     {
-        public StaticImage imageBox;
+        private StaticImage imageBox;
+        public StaticImage ImageBox
+        {
+            get { return imageBox; }
+            set { imageBox = value; }
+        }
         public override void Action(GameState gameState, float initTime)
         {
             base.Action(gameState, initTime);

@@ -21,15 +21,45 @@ namespace BilliardGame
 
         private string name;
 
+        private Dictionary<EColorType, int> hitMap;
+        private Dictionary<EColorType, int> inBallMap;
+
+        public PlayerUI playerUI;
+
         public string Name
         {
             get { return name; }
         }
 
-        private Dictionary<EColorType, int> hitMap;
-        private Dictionary<EColorType, int> inBallMap;
+        public int Score
+        {
+            get { return score; }
+            set { score = value; }
+        }
 
-        public PlayerUI playerUI;
+        public int Scalar
+        {
+            get { return scalar; }
+            set { scalar = value; }
+        }
+
+        public int HitTimes
+        {
+            get { return hitTimes; }
+            set { hitTimes = value; }
+        }
+
+        public bool IsHoldTurn
+        {
+            get { return isHoldTurn; }
+            set { isHoldTurn = value; } 
+        }
+
+        public int TolerantWhiteIn
+        {
+            get { return tolerantWhiteIn; }
+            set { tolerantWhiteIn = value; }
+        }
 
         public Player(string name)
         {
@@ -48,17 +78,7 @@ namespace BilliardGame
             tolerantWhiteIn = 0;
         }
 
-        public int GetScore() { return score; }
-        public void SetScore(int score) { this.score = score; }
         public void SetRoundScore(int score) { playerUI.SetRoundScore(score); }
-        public int GetScalar() { return scalar; }
-        public void SetScalar(int scalar) { this.scalar = scalar; }
-        public int GetHitTimes() { return hitTimes; }
-        public void SetHitTimes(int hitTimes) { this.hitTimes = hitTimes; }
-        public bool GetTurnHold() { return isHoldTurn; }
-        public void SetTurnHold(bool isHoldTurn) { this.isHoldTurn = isHoldTurn; }
-        public int GetTolerantWhiteIn() { return tolerantWhiteIn; }
-        public void SetTolerantWhiteIn(int tolerantWhiteIn) { this.tolerantWhiteIn = tolerantWhiteIn; }
         public void SetCurScalar(int scalar) { curScalar = scalar; }
         public void SetCurHoldTurn(bool isHoldTurn) { isCurHoldTurn = isHoldTurn; }
         public void SetGameLevel(int level) { this.gameLevel = level; }
@@ -122,12 +142,12 @@ namespace BilliardGame
                     return false;
                 }
                 Reset();
-                SetScore(score += Ball.GetScoreOf(EColorType.WHITE));
+                Score = score += Ball.GetScoreOf(EColorType.WHITE);
 
                 if (isHoldTurn)
                 {
                     Player nextPlayer = gameState.NextPlayer;
-                    nextPlayer.SetTurnHold(true);
+                    nextPlayer.IsHoldTurn = true;
                 }
 
                 return true;
@@ -137,7 +157,7 @@ namespace BilliardGame
                 if (hitMap.Count == 0)
                 {
                     Reset();
-                    SetScore(GetScore() - 1);
+                    Score = Score - 1;
 
                     if (isCurHoldTurn)
                     {
@@ -176,7 +196,7 @@ namespace BilliardGame
                 foreach (var kpl in inBallMap)
                 {
                     score += 1;
-                    SetScore(score);
+                    Score = score;
                 }
             }
             else
@@ -192,7 +212,7 @@ namespace BilliardGame
                             for (int i = 0; i < numRed; i++)
                             {
                                 score += curScalar * scoreBase;
-                                SetScore(score);
+                                Score = score;
                                 scoreBase *= 2;
                             }
 
@@ -226,7 +246,7 @@ namespace BilliardGame
                         EColorType color = kpl.Key;
 
                         score += 2;
-                        SetScore(score);
+                        Score = score;
 
                         if (color == EColorType.BROWN)
                         {

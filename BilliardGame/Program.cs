@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace BilliardGame
 {
-    public static class MainGame
+    public static class Program
     {
         [STAThread]
         public static void Main()

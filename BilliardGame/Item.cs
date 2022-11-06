@@ -11,7 +11,12 @@ namespace BilliardGame
         public bool IsPlaying { get { return isPlaying; } }
         public bool IsEnd { get { return isEnd; } }
 
-        public StaticText textBox;
+        protected StaticText textBox;
+        public StaticText TextBox 
+        { 
+            get { return textBox; } 
+            set { textBox = value; }
+        }
 
         public Item() { }
         public virtual void Action(GameState gameState, float initTime) { }

@@ -171,12 +171,14 @@ namespace BilliardGame
             sdkCameraMan = new SdkCameraMan(camera);
             sdkCameraMan.setStyle(CameraStyle.CS_MANUAL);
 #endif
-            cue.cueNode.AttachObject(camera);
+            cue.CueNode.AttachObject(camera);
             camera.LookAt(whiteBall.GetGlobalPosition());
 
             fireLine = sceneMgr.RootSceneNode.CreateChildSceneNode("FireLine");
             manual = sceneMgr.CreateManualObject("line");
             fireLine.AttachObject(manual);
+
+            SetViewMode(EViewMode.FOLLOW);
         }
 
         private void setupUI()
@@ -217,22 +219,22 @@ namespace BilliardGame
 
             Player player = new Player("player1");
             PlayerUI playerUI = new PlayerUI();
-            playerUI.txtName = widgets.Where(o => o.GetName() == "player1_name").FirstOrDefault() as StaticText;
-            playerUI.imageGreen = widgets.Where(o => o.GetName() == "player1_green").FirstOrDefault() as StaticImage;
-            playerUI.imageRed = widgets.Where(o => o.GetName() == "player1_red").FirstOrDefault() as StaticImage;
-            playerUI.txtScores = widgets.Where(o => o.GetName() == "player1_scores").FirstOrDefault() as StaticText;
-            playerUI.txtRoundScores = widgets.Where(o => o.GetName() == "player1_bigscore").FirstOrDefault() as StaticText;
+            playerUI.TxtName = widgets.Where(o => o.GetName() == "player1_name").FirstOrDefault() as StaticText;
+            playerUI.ImageGreen = widgets.Where(o => o.GetName() == "player1_green").FirstOrDefault() as StaticImage;
+            playerUI.ImageRed = widgets.Where(o => o.GetName() == "player1_red").FirstOrDefault() as StaticImage;
+            playerUI.TxtScores = widgets.Where(o => o.GetName() == "player1_scores").FirstOrDefault() as StaticText;
+            playerUI.TxtRoundScores = widgets.Where(o => o.GetName() == "player1_bigscore").FirstOrDefault() as StaticText;
             player.playerUI = playerUI;
             playerUI.SetPlayerName(player.Name);
             Players.Add(player);
 
             player = new Player("player2");
             playerUI = new PlayerUI();
-            playerUI.txtName = widgets.Where(o => o.GetName() == "player2_name").FirstOrDefault() as StaticText;
-            playerUI.imageGreen = widgets.Where(o => o.GetName() == "player2_green").FirstOrDefault() as StaticImage;
-            playerUI.imageRed = widgets.Where(o => o.GetName() == "player2_red").FirstOrDefault() as StaticImage;
-            playerUI.txtScores = widgets.Where(o => o.GetName() == "player2_scores").FirstOrDefault() as StaticText;
-            playerUI.txtRoundScores = widgets.Where(o => o.GetName() == "player2_bigscore").FirstOrDefault() as StaticText;
+            playerUI.TxtName = widgets.Where(o => o.GetName() == "player2_name").FirstOrDefault() as StaticText;
+            playerUI.ImageGreen = widgets.Where(o => o.GetName() == "player2_green").FirstOrDefault() as StaticImage;
+            playerUI.ImageRed = widgets.Where(o => o.GetName() == "player2_red").FirstOrDefault() as StaticImage;
+            playerUI.TxtScores = widgets.Where(o => o.GetName() == "player2_scores").FirstOrDefault() as StaticText;
+            playerUI.TxtRoundScores = widgets.Where(o => o.GetName() == "player2_bigscore").FirstOrDefault() as StaticText;
             player.playerUI = playerUI;
             playerUI.SetPlayerName(player.Name);
             Players.Add(player);
@@ -264,7 +266,7 @@ namespace BilliardGame
             ItemManager.Instance.CreateItem(EColorType.MSG, ((StaticText)widgets.Where(o => o.GetName() == "txt_win").FirstOrDefault()));
 
             ItemShowMsg itemMsg = ItemManager.Instance.GetItemByColor(EColorType.MSG) as ItemShowMsg;
-            itemMsg.imageBox = widgets.Where(o => o.GetName() == "win_image").FirstOrDefault() as StaticImage;
+            itemMsg.ImageBox = widgets.Where(o => o.GetName() == "win_image").FirstOrDefault() as StaticImage;
         }
 
         private void setupPhysics()
@@ -399,7 +401,7 @@ namespace BilliardGame
 
         public Player GetWinner()
         {
-            if (Players[0].GetScore() > Players[1].GetScore())
+            if (Players[0].Score > Players[1].Score)
             {
                 return Players[0];
             }
@@ -427,7 +429,7 @@ namespace BilliardGame
                         }
                         else
                         {
-                            if (Players[0].GetScore() > Players[1].GetScore())
+                            if (Players[0].Score > Players[1].Score)
                             {
                                 Globals.Instance.RoundScore[0]++;
                             }
@@ -624,12 +626,12 @@ namespace BilliardGame
                 if (mode == EViewMode.FOLLOW)
                 {
                     camera.SetPosition(camPosOffset, 2, 0);
-                    cue.cueNode.AttachObject(camera);
+                    cue.CueNode.AttachObject(camera);
                     camera.LookAt(whiteBall.GetGlobalPosition());
                 }
                 else if (mode == EViewMode.GOD)
                 {
-                    cue.cueNode.DetachObject(camera);
+                    cue.CueNode.DetachObject(camera);
                     camera.SetPosition(0, 67, 0);
                     camera.LookAt(0.0001f, 0.0001f, 0.0001f);
                     camera.Roll(new Radian(new Degree(-45)));
@@ -767,7 +769,7 @@ namespace BilliardGame
                     timeElapse = 0;
                     dirFlag = 1;
                     power = 0;
-                    cue.SetCuePos(new Vector3(cue.distToTarget, 0, 0));
+                    cue.SetCuePos(new Vector3(cue.DistToTarget, 0, 0));
                     powerCover.SetVisible(true);
                 }
             }
@@ -899,7 +901,7 @@ namespace BilliardGame
 
                 if (overTime <= 0)
                 {
-                    if (Players[0].GetScore() > Players[1].GetScore())
+                    if (Players[0].Score > Players[1].Score)
                     {
                         Globals.Instance.RoundScore[0]++;
                     }
@@ -944,13 +946,13 @@ namespace BilliardGame
                 }
                 else
                 {
-                    CurrentPlayer.SetCurScalar(CurrentPlayer.GetScalar());
-                    CurrentPlayer.SetCurHoldTurn(CurrentPlayer.GetTurnHold());
+                    CurrentPlayer.SetCurScalar(CurrentPlayer.Scalar);
+                    CurrentPlayer.SetCurHoldTurn(CurrentPlayer.IsHoldTurn);
                     Vector3 dirfromZ = cue.GetDirUnder(-Vector3.UNIT_X);
                     dirfromZ = dirfromZ * power;
                     whiteBall.AddForce(dirfromZ, ForceModes.Impulse);
                     cue.SetVisible(false);
-                    cue.SetCuePos(new Vector3(cue.distToTarget, 0, 0));
+                    cue.SetCuePos(new Vector3(cue.DistToTarget, 0, 0));
                     fire = false;
                     canHit = false;
                 }

@@ -106,7 +106,7 @@
     <Compile Include="MenuState.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerUI.cs" />
-    <Compile Include="MainGame.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

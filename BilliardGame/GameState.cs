@@ -132,6 +132,7 @@ namespace BilliardGame
             sceneMgr.SetSkyBox(true, "Examples/SpaceSkyBox", 5000);
  
             camera = sceneMgr.CreateCamera("MainCamera");
+            camera.Position = new Vector3(camPosOffset, 2, 0);
             camera.NearClipDistance = 0.1f;
             camera.FarClipDistance = 0;
 
@@ -177,8 +178,6 @@ namespace BilliardGame
             fireLine = sceneMgr.RootSceneNode.CreateChildSceneNode("FireLine");
             manual = sceneMgr.CreateManualObject("line");
             fireLine.AttachObject(manual);
-
-            SetViewMode(EViewMode.FOLLOW);
         }
 
         private void setupUI()

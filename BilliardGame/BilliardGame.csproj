@@ -47,6 +47,9 @@
     <Reference Include="Mogre-Procedural">
       <HintPath>..\Lib\Mogre-Procedural.dll</HintPath>
     </Reference>
+    <Reference Include="MogreSocks">
+      <HintPath>..\Lib\MogreSocks.dll</HintPath>
+    </Reference>
     <Reference Include="Mogre_Procedural.MogreBites">
       <HintPath>..\Lib\Mogre_Procedural.MogreBites.dll</HintPath>
     </Reference>

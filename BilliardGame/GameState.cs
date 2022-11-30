@@ -12,6 +12,7 @@ using Vector3 = Mogre.Vector3;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using org.ogre.framework;
+using MogreSocks;
 
 namespace BilliardGame
 {
@@ -76,6 +77,8 @@ namespace BilliardGame
         public Player CurrentPlayer;
         public Player NextPlayer;
 
+        private MogreSocksTCPClient mogreSocksTCPClient;
+
         public GameState()
         {
             maxBarLen = 400;
@@ -123,6 +126,22 @@ namespace BilliardGame
         {
             Reset();
 
+            MogreSocksManager.Instance.Initialise();
+
+            mogreSocksTCPClient = MogreSocksManager.Instance.CreateSocket();
+
+            ConnnectListener connnectListener = new ConnnectListener();
+            connnectListener.OnConnect += ConnnectListener_OnConnect;
+            mogreSocksTCPClient.SetConnectListener(connnectListener);
+
+            ReceiveListener recvListener = new ReceiveListener();
+            recvListener.OnReceive += RecvListener_OnReceive;
+            mogreSocksTCPClient.SetReceiveListener(recvListener);
+
+            DisconnectListener disconnListener = new DisconnectListener();
+            disconnListener.OnDisconnect += DisconnListener_OnDisconnect;
+            mogreSocksTCPClient.SetDisconnectListener(disconnListener);  
+
             OgreFramework.Instance.log.LogMessage("Entering Game...");
 
             sceneMgr = OgreFramework.Instance.root.CreateSceneManager(SceneType.ST_GENERIC, "GameSceneMgr");
@@ -146,6 +165,18 @@ namespace BilliardGame
             setupPlayer();
             setupPhysics();
             createScene();
+        }
+
+        private void DisconnListener_OnDisconnect(string addr, uint port)
+        {
+        }
+
+        private void RecvListener_OnReceive(byte[] data, string addr, uint port)
+        {
+        }
+
+        private void ConnnectListener_OnConnect(string addr, uint port, int i)
+        {
         }
 
         private void createScene()
@@ -610,6 +641,9 @@ namespace BilliardGame
             physx.Dispose();
 
             OgreFramework.Instance.log.LogMessage("Leaving Game...");
+
+            MogreSocksManager.Instance.DeleteSocket(mogreSocksTCPClient);
+            MogreSocksManager.Instance.CleanUp();
 
             if (sceneMgr != null)
             {

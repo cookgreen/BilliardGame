@@ -1,51 +1,51 @@
-00:24:14  |  Platform  |  Info  |  * Initialise: OgreRenderManager  |  src\MyGUI_OgreRenderManager.cpp  |  34
-00:24:14  |  Platform  |  Info  |  OgreRenderManager successfully initialized  |  src\MyGUI_OgreRenderManager.cpp  |  62
-00:24:14  |  Platform  |  Info  |  * Initialise: OgreDataManager  |  src\MyGUI_OgreDataManager.cpp  |  23
-00:24:14  |  Platform  |  Info  |  OgreDataManager successfully initialized  |  src\MyGUI_OgreDataManager.cpp  |  27
-00:24:14  |  Core  |  Info  |  * Initialise: Gui  |  src\MyGUI_Gui.cpp  |  75
-00:24:14  |  Core  |  Info  |  * MyGUI version 3.1.0  |  src\MyGUI_Gui.cpp  |  80
-00:24:14  |  Core  |  Info  |  * Initialise: ResourceManager  |  src\MyGUI_ResourceManager.cpp  |  42
-00:24:14  |  Core  |  Info  |  ResourceManager successfully initialized  |  src\MyGUI_ResourceManager.cpp  |  50
-00:24:14  |  Core  |  Info  |  * Initialise: LayerManager  |  src\MyGUI_LayerManager.cpp  |  43
-00:24:14  |  Core  |  Info  |  LayerManager successfully initialized  |  src\MyGUI_LayerManager.cpp  |  51
-00:24:14  |  Core  |  Info  |  * Initialise: WidgetManager  |  src\MyGUI_WidgetManager.cpp  |  68
-00:24:14  |  Core  |  Info  |  WidgetManager successfully initialized  |  src\MyGUI_WidgetManager.cpp  |  110
-00:24:14  |  Core  |  Info  |  * Initialise: InputManager  |  src\MyGUI_InputManager.cpp  |  56
-00:24:14  |  Core  |  Info  |  InputManager successfully initialized  |  src\MyGUI_InputManager.cpp  |  70
-00:24:14  |  Core  |  Info  |  * Initialise: SubWidgetManager  |  src\MyGUI_SubWidgetManager.cpp  |  43
-00:24:14  |  Core  |  Info  |  SubWidgetManager successfully initialized  |  src\MyGUI_SubWidgetManager.cpp  |  63
-00:24:14  |  Core  |  Info  |  * Initialise: SkinManager  |  src\MyGUI_SkinManager.cpp  |  44
-00:24:14  |  Core  |  Info  |  SkinManager successfully initialized  |  src\MyGUI_SkinManager.cpp  |  52
-00:24:14  |  Core  |  Info  |  * Initialise: FontManager  |  src\MyGUI_FontManager.cpp  |  42
-00:24:14  |  Core  |  Info  |  FontManager successfully initialized  |  src\MyGUI_FontManager.cpp  |  51
-00:24:14  |  Core  |  Info  |  * Initialise: ControllerManager  |  src\MyGUI_ControllerManager.cpp  |  40
-00:24:14  |  Core  |  Info  |  ControllerManager successfully initialized  |  src\MyGUI_ControllerManager.cpp  |  50
-00:24:14  |  Core  |  Info  |  * Initialise: PointerManager  |  src\MyGUI_PointerManager.cpp  |  58
-00:24:14  |  Core  |  Info  |  PointerManager successfully initialized  |  src\MyGUI_PointerManager.cpp  |  73
-00:24:14  |  Core  |  Info  |  * Initialise: ClipboardManager  |  src\MyGUI_ClipboardManager.cpp  |  81
-00:24:14  |  Core  |  Info  |  ClipboardManager successfully initialized  |  src\MyGUI_ClipboardManager.cpp  |  95
-00:24:14  |  Core  |  Info  |  * Initialise: LayoutManager  |  src\MyGUI_LayoutManager.cpp  |  51
-00:24:14  |  Core  |  Info  |  LayoutManager successfully initialized  |  src\MyGUI_LayoutManager.cpp  |  57
-00:24:14  |  Core  |  Info  |  * Initialise: DynLibManager  |  src\MyGUI_DynLibManager.cpp  |  35
-00:24:14  |  Core  |  Info  |  DynLibManager successfully initialized  |  src\MyGUI_DynLibManager.cpp  |  39
-00:24:14  |  Core  |  Info  |  * Initialise: PluginManager  |  src\MyGUI_PluginManager.cpp  |  35
-00:24:14  |  Core  |  Info  |  PluginManager successfully initialized  |  src\MyGUI_PluginManager.cpp  |  39
-00:24:14  |  Core  |  Info  |  * Initialise: LanguageManager  |  src\MyGUI_LanguageManager.cpp  |  39
-00:24:14  |  Core  |  Info  |  LanguageManager successfully initialized  |  src\MyGUI_LanguageManager.cpp  |  43
-00:24:14  |  Core  |  Info  |  * Initialise: FactoryManager  |  src\MyGUI_FactoryManager.cpp  |  33
-00:24:14  |  Core  |  Info  |  FactoryManager successfully initialized  |  src\MyGUI_FactoryManager.cpp  |  36
-00:24:14  |  Core  |  Info  |  * Initialise: ToolTipManager  |  src\MyGUI_ToolTipManager.cpp  |  49
-00:24:14  |  Core  |  Info  |  ToolTipManager successfully initialized  |  src\MyGUI_ToolTipManager.cpp  |  53
-00:24:14  |  Core  |  Info  |  Load ini file 'core_theme.xml'  |  src\MyGUI_ResourceManager.cpp  |  119
-00:24:14  |  Core  |  Info  |  Load ini file 'core_language.xml'  |  src\MyGUI_ResourceManager.cpp  |  119
-00:24:14  |  Core  |  Info  |  Load ini file 'core_font.xml'  |  src\MyGUI_ResourceManager.cpp  |  119
-00:24:14  |  Core  |  Info  |  ResourceTrueTypeFont 'font_DejaVuSans.17' using texture size 512 x 256  |  src\MyGUI_ResourceTrueTypeFont.cpp  |  202
-00:24:14  |  Core  |  Info  |  ResourceTrueTypeFont 'font_DejaVuSans.17' using real height 17 pixels  |  src\MyGUI_ResourceTrueTypeFont.cpp  |  203
-00:24:14  |  Core  |  Info  |  ResourceTrueTypeFont 'font_DejaVuSans.14' using texture size 256 x 256  |  src\MyGUI_ResourceTrueTypeFont.cpp  |  202
-00:24:14  |  Core  |  Info  |  ResourceTrueTypeFont 'font_DejaVuSans.14' using real height 14 pixels  |  src\MyGUI_ResourceTrueTypeFont.cpp  |  203
-00:24:14  |  Core  |  Info  |  Load ini file 'core_resource.xml'  |  src\MyGUI_ResourceManager.cpp  |  119
-00:24:14  |  Core  |  Info  |  Load ini file 'core_skin.xml'  |  src\MyGUI_ResourceManager.cpp  |  119
-00:24:14  |  Core  |  Info  |  Load ini file 'core_pointer.xml'  |  src\MyGUI_ResourceManager.cpp  |  119
-00:24:14  |  Core  |  Info  |  Load ini file 'core_layer.xml'  |  src\MyGUI_ResourceManager.cpp  |  119
-00:24:14  |  Core  |  Info  |  Load ini file 'core_settings.xml'  |  src\MyGUI_ResourceManager.cpp  |  119
-00:24:14  |  Core  |  Info  |  Gui successfully initialized  |  src\MyGUI_Gui.cpp  |  125
+20:24:07  |  Platform  |  Info  |  * Initialise: OgreRenderManager  |  src\MyGUI_OgreRenderManager.cpp  |  34
+20:24:07  |  Platform  |  Info  |  OgreRenderManager successfully initialized  |  src\MyGUI_OgreRenderManager.cpp  |  62
+20:24:07  |  Platform  |  Info  |  * Initialise: OgreDataManager  |  src\MyGUI_OgreDataManager.cpp  |  23
+20:24:07  |  Platform  |  Info  |  OgreDataManager successfully initialized  |  src\MyGUI_OgreDataManager.cpp  |  27
+20:24:07  |  Core  |  Info  |  * Initialise: Gui  |  src\MyGUI_Gui.cpp  |  75
+20:24:07  |  Core  |  Info  |  * MyGUI version 3.1.0  |  src\MyGUI_Gui.cpp  |  80
+20:24:07  |  Core  |  Info  |  * Initialise: ResourceManager  |  src\MyGUI_ResourceManager.cpp  |  42
+20:24:07  |  Core  |  Info  |  ResourceManager successfully initialized  |  src\MyGUI_ResourceManager.cpp  |  50
+20:24:07  |  Core  |  Info  |  * Initialise: LayerManager  |  src\MyGUI_LayerManager.cpp  |  43
+20:24:07  |  Core  |  Info  |  LayerManager successfully initialized  |  src\MyGUI_LayerManager.cpp  |  51
+20:24:07  |  Core  |  Info  |  * Initialise: WidgetManager  |  src\MyGUI_WidgetManager.cpp  |  68
+20:24:07  |  Core  |  Info  |  WidgetManager successfully initialized  |  src\MyGUI_WidgetManager.cpp  |  110
+20:24:07  |  Core  |  Info  |  * Initialise: InputManager  |  src\MyGUI_InputManager.cpp  |  56
+20:24:07  |  Core  |  Info  |  InputManager successfully initialized  |  src\MyGUI_InputManager.cpp  |  70
+20:24:07  |  Core  |  Info  |  * Initialise: SubWidgetManager  |  src\MyGUI_SubWidgetManager.cpp  |  43
+20:24:07  |  Core  |  Info  |  SubWidgetManager successfully initialized  |  src\MyGUI_SubWidgetManager.cpp  |  63
+20:24:07  |  Core  |  Info  |  * Initialise: SkinManager  |  src\MyGUI_SkinManager.cpp  |  44
+20:24:07  |  Core  |  Info  |  SkinManager successfully initialized  |  src\MyGUI_SkinManager.cpp  |  52
+20:24:07  |  Core  |  Info  |  * Initialise: FontManager  |  src\MyGUI_FontManager.cpp  |  42
+20:24:07  |  Core  |  Info  |  FontManager successfully initialized  |  src\MyGUI_FontManager.cpp  |  51
+20:24:07  |  Core  |  Info  |  * Initialise: ControllerManager  |  src\MyGUI_ControllerManager.cpp  |  40
+20:24:07  |  Core  |  Info  |  ControllerManager successfully initialized  |  src\MyGUI_ControllerManager.cpp  |  50
+20:24:07  |  Core  |  Info  |  * Initialise: PointerManager  |  src\MyGUI_PointerManager.cpp  |  58
+20:24:07  |  Core  |  Info  |  PointerManager successfully initialized  |  src\MyGUI_PointerManager.cpp  |  73
+20:24:07  |  Core  |  Info  |  * Initialise: ClipboardManager  |  src\MyGUI_ClipboardManager.cpp  |  81
+20:24:07  |  Core  |  Info  |  ClipboardManager successfully initialized  |  src\MyGUI_ClipboardManager.cpp  |  95
+20:24:07  |  Core  |  Info  |  * Initialise: LayoutManager  |  src\MyGUI_LayoutManager.cpp  |  51
+20:24:07  |  Core  |  Info  |  LayoutManager successfully initialized  |  src\MyGUI_LayoutManager.cpp  |  57
+20:24:07  |  Core  |  Info  |  * Initialise: DynLibManager  |  src\MyGUI_DynLibManager.cpp  |  35
+20:24:07  |  Core  |  Info  |  DynLibManager successfully initialized  |  src\MyGUI_DynLibManager.cpp  |  39
+20:24:07  |  Core  |  Info  |  * Initialise: PluginManager  |  src\MyGUI_PluginManager.cpp  |  35
+20:24:07  |  Core  |  Info  |  PluginManager successfully initialized  |  src\MyGUI_PluginManager.cpp  |  39
+20:24:07  |  Core  |  Info  |  * Initialise: LanguageManager  |  src\MyGUI_LanguageManager.cpp  |  39
+20:24:07  |  Core  |  Info  |  LanguageManager successfully initialized  |  src\MyGUI_LanguageManager.cpp  |  43
+20:24:07  |  Core  |  Info  |  * Initialise: FactoryManager  |  src\MyGUI_FactoryManager.cpp  |  33
+20:24:07  |  Core  |  Info  |  FactoryManager successfully initialized  |  src\MyGUI_FactoryManager.cpp  |  36
+20:24:07  |  Core  |  Info  |  * Initialise: ToolTipManager  |  src\MyGUI_ToolTipManager.cpp  |  49
+20:24:07  |  Core  |  Info  |  ToolTipManager successfully initialized  |  src\MyGUI_ToolTipManager.cpp  |  53
+20:24:07  |  Core  |  Info  |  Load ini file 'core_theme.xml'  |  src\MyGUI_ResourceManager.cpp  |  119
+20:24:07  |  Core  |  Info  |  Load ini file 'core_language.xml'  |  src\MyGUI_ResourceManager.cpp  |  119
+20:24:07  |  Core  |  Info  |  Load ini file 'core_font.xml'  |  src\MyGUI_ResourceManager.cpp  |  119
+20:24:07  |  Core  |  Info  |  ResourceTrueTypeFont 'font_DejaVuSans.17' using texture size 512 x 256  |  src\MyGUI_ResourceTrueTypeFont.cpp  |  202
+20:24:07  |  Core  |  Info  |  ResourceTrueTypeFont 'font_DejaVuSans.17' using real height 17 pixels  |  src\MyGUI_ResourceTrueTypeFont.cpp  |  203
+20:24:07  |  Core  |  Info  |  ResourceTrueTypeFont 'font_DejaVuSans.14' using texture size 256 x 256  |  src\MyGUI_ResourceTrueTypeFont.cpp  |  202
+20:24:07  |  Core  |  Info  |  ResourceTrueTypeFont 'font_DejaVuSans.14' using real height 14 pixels  |  src\MyGUI_ResourceTrueTypeFont.cpp  |  203
+20:24:07  |  Core  |  Info  |  Load ini file 'core_resource.xml'  |  src\MyGUI_ResourceManager.cpp  |  119
+20:24:07  |  Core  |  Info  |  Load ini file 'core_skin.xml'  |  src\MyGUI_ResourceManager.cpp  |  119
+20:24:07  |  Core  |  Info  |  Load ini file 'core_pointer.xml'  |  src\MyGUI_ResourceManager.cpp  |  119
+20:24:07  |  Core  |  Info  |  Load ini file 'core_layer.xml'  |  src\MyGUI_ResourceManager.cpp  |  119
+20:24:07  |  Core  |  Info  |  Load ini file 'core_settings.xml'  |  src\MyGUI_ResourceManager.cpp  |  119
+20:24:07  |  Core  |  Info  |  Gui successfully initialized  |  src\MyGUI_Gui.cpp  |  125

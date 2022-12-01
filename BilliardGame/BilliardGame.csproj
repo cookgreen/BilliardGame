@@ -1,39 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C4EA0F92-DB0C-4240-8365-2A980D827C49}</ProjectGuid>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F770164-5D3F-4329-B49C-9BA9243780F3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BilliardGame</RootNamespace>
     <AssemblyName>BilliardGame</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
     <OutputPath>..\Bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>true</Prefer32Bit>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
     <OutputPath>..\Bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>true</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>ballIcon.ico</ApplicationIcon>
@@ -48,6 +47,9 @@
     <Reference Include="Mogre-Procedural">
       <HintPath>..\Lib\Mogre-Procedural.dll</HintPath>
     </Reference>
+    <Reference Include="MogreSocks">
+      <HintPath>..\Lib\MogreSocks.dll</HintPath>
+    </Reference>
     <Reference Include="Mogre_Procedural.MogreBites">
       <HintPath>..\Lib\Mogre_Procedural.MogreBites.dll</HintPath>
     </Reference>
@@ -57,8 +59,7 @@
     <Reference Include="MOIS">
       <HintPath>..\Lib\MOIS.dll</HintPath>
     </Reference>
-    <Reference Include="MyGUI.Sharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="MyGUI.Sharp">
       <HintPath>..\Lib\MyGUI.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="NAudio">
@@ -70,8 +71,7 @@
     <Reference Include="NVorbis">
       <HintPath>..\Lib\NVorbis.dll</HintPath>
     </Reference>
-    <Reference Include="OgreFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="OgreFramework">
       <HintPath>..\Lib\OgreFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -93,8 +93,10 @@
     <Compile Include="EColorType.cs" />
     <Compile Include="EViewMode.cs" />
     <Compile Include="Export.cs" />
-    <Compile Include="GameServerMessageType.cs" />
+    <Compile Include="ExportRenderWindow.cs" />
     <Compile Include="GameNetworkState.cs" />
+    <Compile Include="GameServerMessageType.cs" />
+    <Compile Include="GameState.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Item.cs" />
@@ -104,9 +106,8 @@
     <Compile Include="ItemShowMsg.cs" />
     <Compile Include="ItemStopTime.cs" />
     <Compile Include="ItemTolerantInWhite.cs" />
-    <Compile Include="OgreFrameworkApp.cs" />
-    <Compile Include="GameState.cs" />
     <Compile Include="MenuState.cs" />
+    <Compile Include="OgreFrameworkApp.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerUI.cs" />
     <Compile Include="Program.cs" />
@@ -121,6 +122,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -132,12 +134,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="ballIcon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>

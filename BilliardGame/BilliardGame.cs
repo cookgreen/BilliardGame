@@ -17,6 +17,7 @@ namespace BilliardGame
 {
     public class BilliardGame : IUserNotify, IUserContactReport, IUserTriggerReport
     {
+        private bool isInited;
         private SceneManager sceneMgr;
         private Camera camera;
 
@@ -77,6 +78,11 @@ namespace BilliardGame
         public List<Player> Players;
         public Player CurrentPlayer;
         public Player NextPlayer;
+
+        public bool IsInited
+        {
+            get { return init; }
+        }
 
         public bool IsGameOver
         {
@@ -172,12 +178,6 @@ namespace BilliardGame
 
         private void setupUI()
         {
-
-            Export.CreateGUI();
-            Export.SetRenderWindow(OgreFramework.Instance.renderWnd);
-            Export.SetSceneManager(sceneMgr);
-            Export.SetActiveViewport(0);
-
             PointerManager.Instance.Visible = false;
 
             widgets = Gui.Instance.LoadLayout("playui.layout");

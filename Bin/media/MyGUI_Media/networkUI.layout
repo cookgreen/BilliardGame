@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Window" skin="Window" position="658 330 486 230" layer="Overlapped" name="wndConnectTo">
+        <Property key="Widget_Caption" value="ConnectTo"/>
+        <Widget type="Edit" skin="Edit" position="117 14 320 40" name="txtIPAddress">
+            <Widget type="StaticText" skin="StaticText" position="0 0 100 100"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="13 80 95 22" name="lbPort">
+            <Property key="Widget_Caption" value="Port:"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="117 72 320 38" name="txtPort">
+            <Property key="Widget_Caption" value=""/>
+        </Widget>
+        <Widget type="Button" skin="Button" position="197 126 111 48" name="btnConnect">
+            <Property key="Widget_Caption" value="Connect"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="16 22 100 24" name="lbIPAddress">
+            <Property key="Widget_Caption" value="IP Address:" />
+        </Widget>
+    </Widget>
+</MyGUI>

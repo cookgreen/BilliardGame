@@ -8,10 +8,9 @@ using Mogre_Procedural.MogreBites.Addons;
 using MyGUI.Sharp;
 using MyGUI.OgrePlatform;
 using MOIS;
-using Vector3 = Mogre.Vector3;
-using System.Windows.Forms;
 using System.Security.Cryptography;
 using org.ogre.framework;
+using Vector3 = Mogre.Vector3;
 
 namespace BilliardGame
 {
@@ -55,6 +54,11 @@ namespace BilliardGame
             OgreFramework.Instance.keyboard.KeyPressed += keyPressed;
             OgreFramework.Instance.keyboard.KeyReleased += keyReleased;
 
+            Export.CreateGUI();
+            Export.SetRenderWindow(OgreFramework.Instance.renderWnd);
+            Export.SetSceneManager(sceneMgr);
+            Export.SetActiveViewport(0);
+
             game.SetupGame(camera);
         }
 
@@ -73,32 +77,47 @@ namespace BilliardGame
 
         public bool keyPressed(KeyEvent evt)
         {
-            game.InjectKeyPressed(evt);
+            if (game.IsInited)
+            {
+                game.InjectKeyPressed(evt);
+            }
 
             return true;
         }
         public bool keyReleased(KeyEvent evt)
         {
-            game.InjectKeyReleased(evt);
+            if (game.IsInited)
+            {
+                game.InjectKeyReleased(evt);
+            }
 
             return true;
         }
 
         public bool mouseMoved(MouseEvent evt)
         {
-            game.InjectMouseMoved(evt);
+            if (game.IsInited)
+            {
+                game.InjectMouseMoved(evt);
+            }
 
             return true;
         }
         public bool mousePressed(MouseEvent evt, MouseButtonID id)
         {
-            game.InjectMousePressed(evt, id);
+            if (game.IsInited)
+            {
+                game.InjectMousePressed(evt, id);
+            }
 
             return true;
         }
         public bool mouseReleased(MouseEvent evt, MouseButtonID id)
         {
-            game.InjectMouseReleased(evt, id);
+            if (game.IsInited)
+            {
+                game.InjectMouseReleased(evt, id);
+            }
 
             return true;
         }

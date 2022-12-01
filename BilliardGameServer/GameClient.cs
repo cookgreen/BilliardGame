@@ -49,7 +49,7 @@ namespace BilliardGameServer
             }
             catch
             {
-                Disconnect?.Invoke();
+                if (Disconnect != null) { Disconnect(); }
             }
         }
 

@@ -162,7 +162,7 @@ namespace BilliardGame
                 Globals.Instance.RoundScore.Add(0);
                 Globals.Instance.TotalRound = 5;
                 Globals.Instance.CurRound = 0;
-                changeAppState(findByName("GameState"));
+                changeAppState(findByName("NetworkState"));
             }
         }
 

@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("3D Billiard Game")]
+[assembly: AssemblyTitle("Billiard Game")]
 [assembly: AssemblyDescription("Based on Mogre MyGUI and Nvida Physx")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Yin Xiaoguang")]

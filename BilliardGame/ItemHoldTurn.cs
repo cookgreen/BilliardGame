@@ -10,7 +10,7 @@ namespace BilliardGame
     {
         public ItemHoldTurn() { }
 
-        public override void Action(GameState gameState, float initTime)
+        public override void Action(BilliardGame gameState, float initTime)
         {
             base.Action(gameState, initTime);
 
@@ -29,7 +29,7 @@ namespace BilliardGame
                 isEnd = true;
             }
         }
-        public override void ActionEnd(GameState gameState)
+        public override void ActionEnd(BilliardGame gameState)
         {
             gameState.CurrentPlayer.IsHoldTurn = false;
         }

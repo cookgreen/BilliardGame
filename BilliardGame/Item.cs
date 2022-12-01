@@ -19,8 +19,8 @@ namespace BilliardGame
         }
 
         public Item() { }
-        public virtual void Action(GameState gameState, float initTime) { }
+        public virtual void Action(BilliardGame gameState, float initTime) { }
         public virtual void Update(float timeSinceLastFrame) { }
-        public virtual void ActionEnd(GameState gameState) { }
+        public virtual void ActionEnd(BilliardGame gameState) { }
     }
 }

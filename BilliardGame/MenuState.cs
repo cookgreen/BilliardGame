@@ -46,8 +46,8 @@ namespace BilliardGame
 
             OgreFramework.Instance.trayMgr.destroyAllWidgets();
             OgreFramework.Instance.trayMgr.createLabel(TrayLocation.TL_TOP, "lbGameTitle", "Billiard Game", 250);
-            OgreFramework.Instance.trayMgr.createButton(TrayLocation.TL_CENTER, "btnEnterOnePlayerGame", "One Player Game", 250);
-            OgreFramework.Instance.trayMgr.createButton(TrayLocation.TL_CENTER, "btnEnterTwoPlayerGame", "Two Player Game", 250);
+            OgreFramework.Instance.trayMgr.createButton(TrayLocation.TL_CENTER, "btnEnterOnePlayerGame", "Singleplayer", 250);
+            OgreFramework.Instance.trayMgr.createButton(TrayLocation.TL_CENTER, "btnEnterTwoPlayerGame", "Multiplayer", 250);
             OgreFramework.Instance.trayMgr.createButton(TrayLocation.TL_CENTER, "btnExit", "Exit Game", 250);
 
             OgreFramework.Instance.mouse.MouseMoved += mouseMoved;

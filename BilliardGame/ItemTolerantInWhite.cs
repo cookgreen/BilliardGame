@@ -17,7 +17,7 @@ namespace BilliardGame
 
         public ItemTolerantInWhite() { }
 
-        public override void Action(GameState gameState, float initTime)
+        public override void Action(BilliardGame gameState, float initTime)
         {
             base.Action(gameState, initTime);
 
@@ -28,7 +28,7 @@ namespace BilliardGame
         {
             textBox.SetCaption(curPlayer.TolerantWhiteIn.ToString());
         }
-        public override void ActionEnd(GameState gameState)
+        public override void ActionEnd(BilliardGame gameState)
         {
             gameState.CurrentPlayer.TolerantWhiteIn = 0;
             textBox.SetCaption(curPlayer.TolerantWhiteIn.ToString());

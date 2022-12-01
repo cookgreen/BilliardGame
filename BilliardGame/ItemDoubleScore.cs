@@ -10,7 +10,7 @@ namespace BilliardGame
     {
         public ItemDoubleScore() { }
 
-        public override void Action(GameState gameState, float initTime)
+        public override void Action(BilliardGame gameState, float initTime)
         {
             base.Action(gameState, initTime);
 
@@ -33,7 +33,7 @@ namespace BilliardGame
                 isEnd = true;
             }
         }
-        public override void ActionEnd(GameState gameState)
+        public override void ActionEnd(BilliardGame gameState)
         {
             List<Player> playerList = gameState.Players;
             foreach (var player in playerList)

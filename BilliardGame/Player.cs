@@ -129,7 +129,7 @@ namespace BilliardGame
             playerUI.SetTurn(turn);
         }
 
-        public bool Judge(GameState gameState)
+        public bool Judge(BilliardGame gameState)
         {
             Console.WriteLine("Enter Judge");
 

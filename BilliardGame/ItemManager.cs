@@ -85,7 +85,7 @@ namespace BilliardGame
             itemMap.Add(color, item);
         }
 
-        public void Action(EColorType color, GameState gameState, int initTime)
+        public void Action(EColorType color, BilliardGame gameState, int initTime)
         {
             Item item = GetItemByColor(color);
             if (item != null)
@@ -99,7 +99,7 @@ namespace BilliardGame
             }
         }
 
-        public void Update(float timeSinceLastFrame, GameState gameState)
+        public void Update(float timeSinceLastFrame, BilliardGame gameState)
         {
             for (int i = ActionItemList.Count - 1; i > 0; i--)
             {
@@ -115,7 +115,7 @@ namespace BilliardGame
             }
         }
 
-        public void ClearActionItem(EColorType color, GameState gameState)
+        public void ClearActionItem(EColorType color, BilliardGame gameState)
         {
             Item item = GetItemByColor(color);
             int idx = ActionItemList.IndexOf(item);

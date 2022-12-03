@@ -17,7 +17,6 @@ namespace BilliardGame
 {
     public class BilliardGame : IUserNotify, IUserContactReport, IUserTriggerReport
     {
-        private bool isInited;
         private SceneManager sceneMgr;
         private Camera camera;
 

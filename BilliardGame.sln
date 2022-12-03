@@ -1,9 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilliardGame", "BilliardGame\BilliardGame.csproj", "{7F770164-5D3F-4329-B49C-9BA9243780F3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilliardGameServer", "BilliardGameServer\BilliardGameServer.csproj", "{74C556E6-9075-4702-BDE2-1840D221DF79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,12 +15,11 @@ Global
 		{7F770164-5D3F-4329-B49C-9BA9243780F3}.Debug|x86.Build.0 = Debug|x86
 		{7F770164-5D3F-4329-B49C-9BA9243780F3}.Release|x86.ActiveCfg = Release|x86
 		{7F770164-5D3F-4329-B49C-9BA9243780F3}.Release|x86.Build.0 = Release|x86
-		{74C556E6-9075-4702-BDE2-1840D221DF79}.Debug|x86.ActiveCfg = Debug|x86
-		{74C556E6-9075-4702-BDE2-1840D221DF79}.Debug|x86.Build.0 = Debug|x86
-		{74C556E6-9075-4702-BDE2-1840D221DF79}.Release|x86.ActiveCfg = Release|x86
-		{74C556E6-9075-4702-BDE2-1840D221DF79}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {232980AE-0434-41FB-B050-DCD325337A66}
 	EndGlobalSection
 EndGlobal

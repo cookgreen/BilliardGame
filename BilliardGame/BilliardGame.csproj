@@ -94,7 +94,6 @@
     <Compile Include="EViewMode.cs" />
     <Compile Include="Export.cs" />
     <Compile Include="ExportRenderWindow.cs" />
-    <Compile Include="GameNetworkState.cs" />
     <Compile Include="GameServerMessageType.cs" />
     <Compile Include="GameState.cs" />
     <Compile Include="Globals.cs" />

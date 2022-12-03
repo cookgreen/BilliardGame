@@ -23,7 +23,6 @@ namespace BilliardGame
 
             AppState.Create<MenuState>(appStateManager, "MainMenu");
             AppState.Create<GameState>(appStateManager, "GameState");
-            AppState.Create<GameNetworkState>(appStateManager, "NetworkState");
 
             appStateManager.Start(appStateManager.FindByName("MainMenu"));
         }

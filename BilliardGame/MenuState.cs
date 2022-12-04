@@ -14,6 +14,8 @@ namespace BilliardGame
         private SceneNode ball1;
         private SceneNode ball2;
 
+        private ParticleSystem ps;
+
         public MenuState()
         {
             m_bQuit = false;
@@ -31,9 +33,8 @@ namespace BilliardGame
             sceneMgr.AmbientLight = cvAmbineLight;
  
             camera = sceneMgr.CreateCamera("MainMenuCamera");
-            camera.SetPosition(0,25,-50);
-            Mogre.Vector3 vectorCameraLookat = new Mogre.Vector3(0, 0, 0);
-            camera.LookAt(vectorCameraLookat);
+            camera.SetPosition(0, 0, 800);
+            camera.LookAt(new Vector3(0, 0, 0));
             camera.NearClipDistance = 1;
 
             camera.AspectRatio = OgreFramework.Instance.viewport.ActualWidth / OgreFramework.Instance.viewport.ActualHeight;
@@ -46,8 +47,8 @@ namespace BilliardGame
 
             OgreFramework.Instance.trayMgr.destroyAllWidgets();
             OgreFramework.Instance.trayMgr.createLabel(TrayLocation.TL_TOP, "lbGameTitle", "Billiard Game", 250);
-            OgreFramework.Instance.trayMgr.createButton(TrayLocation.TL_CENTER, "btnEnterOnePlayerGame", "One Player", 250);
-            OgreFramework.Instance.trayMgr.createButton(TrayLocation.TL_CENTER, "btnEnterTwoPlayerGame", "Two Player", 250);
+            OgreFramework.Instance.trayMgr.createButton(TrayLocation.TL_CENTER, "btnEnterOnePlayerGame", "Single Player", 250);
+            OgreFramework.Instance.trayMgr.createButton(TrayLocation.TL_CENTER, "btnEnterTwoPlayerGame", "Multiple Player", 250);
             OgreFramework.Instance.trayMgr.createButton(TrayLocation.TL_CENTER, "btnExit", "Exit Game", 250);
 
             OgreFramework.Instance.mouse.MouseMoved += mouseMoved;
@@ -68,25 +69,25 @@ namespace BilliardGame
             light.Position = new Vector3(-250, 200, 0);
             light.SetSpecularColour(255, 255, 255);
 
-            //ps = sceneMgr.CreateParticleSystem("Fireworks1", "Examples/GreenyNimbus");
-            SceneNode node = sceneMgr.RootSceneNode.CreateChildSceneNode(new Vector3(-250, 60, 0));
+            ps = sceneMgr.CreateParticleSystem("Fireworks1", "Examples/GreenyNimbus");
+            SceneNode node = sceneMgr.RootSceneNode.CreateChildSceneNode(new Vector3(-250, -60, 0));
             
-            Entity ball = sceneMgr.CreateEntity("sphere_t.mesh");
-            ball.SetMaterialName("ball_0");
+            Entity ball1Ent = sceneMgr.CreateEntity("sphere_t.mesh");
+            ball1Ent.SetMaterialName("ball_0");
             ball1 = node.CreateChildSceneNode(new Vector3(0, 100, 0));
-            ball1.CreateChildSceneNode(new Vector3(-1, 0, 0)).AttachObject(ball);
+            ball1.CreateChildSceneNode(new Vector3(-1, 0, 0)).AttachObject(ball1Ent);
             ball1.Scale(30, 30, 30);
-            //node.AttachObject(ps);
+            node.AttachObject(ps);
 
-            //ps = sceneMgr.CreateParticleSystem("Fireworks2", "Examples/GreenyNimbus");
+            ps = sceneMgr.CreateParticleSystem("Fireworks2", "Examples/GreenyNimbus");
             node = sceneMgr.RootSceneNode.CreateChildSceneNode(new Vector3(250, -60, 0));
 
-            ball = sceneMgr.CreateEntity("sphere_t.mesh");
-            ball.SetMaterialName("ball_1");
+            Entity ball2Ent = sceneMgr.CreateEntity("sphere_t.mesh");
+            ball2Ent.SetMaterialName("ball_1");
             ball2 = node.CreateChildSceneNode(new Vector3(0, 100, 0));
-            ball2.CreateChildSceneNode(new Vector3(1, 0, 0)).AttachObject(ball);
+            ball2.CreateChildSceneNode(new Vector3(1, 0, 0)).AttachObject(ball2Ent);
             ball2.Scale(30, 30, 30);
-            //node.AttachObject(ps);
+            node.AttachObject(ps);
         }
 
         public override void Exit()
@@ -171,8 +172,8 @@ namespace BilliardGame
             frameEvent.timeSinceLastFrame = (float)timeSinceLastFrame;
             OgreFramework.Instance.trayMgr.frameRenderingQueued(frameEvent);
 
-            ball1.Yaw(new Radian(new Degree((float)timeSinceLastFrame / 10.0f)));
-            ball2.Yaw(new Radian(new Degree((float)timeSinceLastFrame / 10.0f)));
+            ball1.Yaw(new Radian(new Degree((float)timeSinceLastFrame * 1000 / 10.0f)));
+            ball2.Yaw(new Radian(new Degree((float)timeSinceLastFrame * 1000 / 10.0f)));
 
             if (m_bQuit == true)
             {

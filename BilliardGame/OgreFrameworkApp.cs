@@ -7,6 +7,8 @@ namespace BilliardGame
 {
     public class OgreFrameworkApp : IDisposable
     {
+        private AppStateManager appStateManager;
+
         public OgreFrameworkApp()
         {
             appStateManager = null;
@@ -31,7 +33,5 @@ namespace BilliardGame
         {
             appStateManager = null;
         }
-
-        private AppStateManager appStateManager;
     }
 }
